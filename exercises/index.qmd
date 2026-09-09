@@ -1,0 +1,17 @@
+---
+title: "Exercises"
+---
+
+Exercises should be usable in a classroom, workshop or self-directed setting. They may be embedded within modules or provided as separate downloadable resources.
+
+## Suggested structure
+
+1. State the learning objective.
+2. Describe the setting and task.
+3. Give learners only the information needed to begin.
+4. Provide prompts that encourage reasoning rather than recall alone.
+5. Put suggested answers or facilitator notes in collapsible sections.
+6. State any assumptions and reasonable alternative answers.
+
+The [effect-size module](../modules/effect-sizes.qmd#check-your-understanding) contains the first short exercises.
+

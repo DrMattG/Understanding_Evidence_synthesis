@@ -1,0 +1,42 @@
+---
+title: "Contribute"
+---
+
+Contributions can be new materials, adaptations, corrections, translations or improvements to accessibility and documentation.
+
+## Before contributing
+
+Please check that you have permission to share every component of the resource. Teaching text and media contributed to this repository will be made available under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); contributed code will be available under the [MIT licence](https://opensource.org/license/mit).
+
+## Contribution routes
+
+### Suggest an idea or report a problem
+
+[Open a GitHub issue](https://github.com/DrMattG/Understanding_Evidence_synthesis/issues) to propose a module, flag an error or discuss a substantial change before investing time in it.
+
+### Submit a resource
+
+1. Fork the repository and create a branch.
+2. Copy the appropriate file from `templates/`.
+3. Add supporting files in a clearly named folder.
+4. Preview the resource with `quarto preview`.
+5. Open a pull request explaining the audience, learning outcomes and how the material has been tested.
+
+For small corrections, use the **Edit this page** link shown on each page.
+
+## Minimum information for a module
+
+- Title and short description
+- Author or contributors
+- Intended audience and prerequisites
+- Learning outcomes
+- Approximate duration
+- Editable source materials
+- Dependencies and setup instructions
+- References and third-party attributions
+
+Use the [module template on GitHub](https://github.com/DrMattG/Understanding_Evidence_synthesis/blob/main/templates/module-template.qmd) to begin.
+
+## Review
+
+Contributions should be checked for methodological accuracy, clarity, usability and licensing. Review is intended to improve resources collaboratively; acceptance should not imply that a module represents the only valid way to teach a topic.

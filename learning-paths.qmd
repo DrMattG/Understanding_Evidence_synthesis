@@ -1,0 +1,36 @@
+---
+title: "Learning paths"
+---
+
+The materials are modular: there is no requirement to work through them in a fixed order. These suggested paths show how resources could be combined.
+
+## Understanding published syntheses
+
+For decision makers, practitioners and students who need to interpret reviews:
+
+1. Framing an answerable question *(planned)*
+2. Recognising study designs and threats to validity *(planned)*
+3. [Understanding effect sizes](modules/effect-sizes.qmd)
+4. Reading a forest plot *(planned)*
+5. Judging heterogeneity and applicability *(planned)*
+
+## Conducting an evidence synthesis
+
+For learners planning or undertaking a review:
+
+1. Questions and eligibility criteria *(planned)*
+2. Searching and screening *(planned)*
+3. Critical appraisal *(planned)*
+4. Data extraction and effect-size calculation *(planned)*
+5. Quantitative or narrative synthesis *(planned)*
+6. Reporting and reproducibility *(planned)*
+
+## Short methods workshop
+
+For a half-day introductory session:
+
+1. What makes evidence trustworthy? *(planned)*
+2. [Understanding effect sizes](modules/effect-sizes.qmd)
+3. Interpreting a forest plot *(planned)*
+4. A critical-appraisal exercise *(planned)*
+

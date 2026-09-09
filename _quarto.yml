@@ -1,0 +1,51 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "Understanding Evidence Synthesis"
+  subtitle: "Open, reusable resources for teaching evidence synthesis"
+  author: "Matthew Grainger and Gavin Stewart"
+  repo-url: https://github.com/DrMattG/Understanding_Evidence_synthesis
+  repo-actions: [edit, issue]
+  sharing: [linkedin]
+  chapters:
+    - index.qmd
+    - part: "Start here"
+      chapters:
+        - about.qmd
+        - learning-paths.qmd
+    - part: "Teaching modules"
+      chapters:
+        - modules/index.qmd
+        - modules/effect-sizes.qmd
+    - part: "Resources"
+      chapters:
+        - slides/index.qmd
+        - exercises/index.qmd
+        - datasets/index.qmd
+    - part: "Contribute"
+      chapters:
+        - contribute.qmd
+  page-footer:
+    left: "Teaching materials are licensed under CC BY 4.0. Code is licensed under MIT."
+    right: "Built with Quarto"
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-fold: show
+    code-tools: true
+    number-sections: false
+    link-external-newwindow: true
+
+execute:
+  freeze: auto
+  warning: false
+  message: false
+
+editor: visual
+

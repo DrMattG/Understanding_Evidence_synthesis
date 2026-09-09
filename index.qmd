@@ -1,0 +1,44 @@
+---
+title: "Understanding Evidence Synthesis"
+page-layout: full
+---
+
+Evidence synthesis is now taught across ecology, conservation, health, education and the social sciences, but good teaching materials are often scattered across personal websites and one-off workshops.
+
+This an open collection of reusable lessons, slides, exercises, datasets and instructor notes. It is intended for teachers who want adaptable material and learners who want clear explanations grounded in practical examples.
+
+## Explore the collection
+
+:::::: grid
+::: {.g-col-12 .g-col-md-4}
+### Teaching modules
+
+Short, self-contained lessons that can be used independently or assembled into a course.
+
+[Browse modules](modules/index.qmd)
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### Exercises and data
+
+Activities, worked examples and reusable datasets for hands-on teaching.
+
+[Browse exercises](exercises/index.qmd)
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### Contribute
+
+Share a resource, improve an explanation or adapt a module for another discipline.
+
+[How to contribute](contribute.qmd)
+:::
+::::::
+
+## First module
+
+Start with [Understanding effect sizes](modules/effect-sizes.qmd), an introduction to effect magnitude, uncertainty and practical interpretation.
+
+::: {.callout-note title="A growing resource"}
+This is an early version. The structure and contribution process will develop as materials and contributors are added.
+:::

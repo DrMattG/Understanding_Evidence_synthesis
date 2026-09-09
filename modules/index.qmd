@@ -1,0 +1,22 @@
+---
+title: "Teaching modules"
+---
+
+Modules are designed to be adapted. Each one should identify its audience, learning outcomes, approximate duration, prerequisites and associated teaching resources.
+
+| Module | Level | Duration | Resources |
+|---|---:|---:|---|
+| [Understanding effect sizes](effect-sizes.qmd) | Introductory | 45–60 minutes | Lesson and embedded exercises |
+
+## Planned modules
+
+- Questions, estimands and eligibility criteria
+- Searching and screening
+- Critical appraisal and causal claims
+- Reading forest and orchard plots
+- Heterogeneity and generalisation
+- Meta-regression and multilevel models
+- Alternatives to vote counting
+- Reporting and reproducible workflows
+- Responsible automation in evidence synthesis
+

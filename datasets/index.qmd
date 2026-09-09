@@ -1,0 +1,17 @@
+---
+title: "Datasets"
+---
+
+This section will contain small, documented datasets suitable for teaching evidence-synthesis methods.
+
+Contributed datasets should include:
+
+- a clear licence and source;
+- a data dictionary;
+- enough context to understand the teaching example;
+- a distinction between original, simulated and modified data;
+- scripts documenting any cleaning or transformation;
+- no sensitive or personally identifying information.
+
+Simulated data are welcome when they make an assumption or statistical behaviour easier to see.
+

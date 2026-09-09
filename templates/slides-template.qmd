@@ -1,0 +1,39 @@
+---
+title: "Session title"
+subtitle: "Optional subtitle"
+author: "Your name"
+format:
+  revealjs:
+    slide-number: true
+    chalkboard: true
+    footer: "Understanding Evidence Synthesis"
+---
+
+## Learning outcomes
+
+By the end of this session, participants should be able to:
+
+- Add an observable learning outcome.
+- Add another learning outcome.
+
+## Opening question
+
+Begin with a question, decision or claim that gives the session a purpose.
+
+## Core idea
+
+Keep slides concise and put additional guidance in speaker notes.
+
+::: {.notes}
+Add facilitator notes, timing and likely misconceptions here.
+:::
+
+## Activity
+
+Describe what participants should do and how long they have.
+
+## Take-home messages
+
+- First message
+- Second message
+

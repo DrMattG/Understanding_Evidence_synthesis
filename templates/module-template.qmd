@@ -1,0 +1,45 @@
+---
+title: "Module title"
+description: "One-sentence description"
+author: "Your name"
+---
+
+| | |
+|---|---|
+| **Audience** | Describe the intended learners |
+| **Duration** | Approximate teaching time |
+| **Prerequisites** | Prior knowledge or skills |
+| **Software** | Required software, or “None” |
+
+## Learning outcomes
+
+After this module, learners should be able to:
+
+1. Add an observable learning outcome.
+2. Add another learning outcome.
+
+## Core idea
+
+Introduce the problem and explain why it matters.
+
+## Worked example
+
+Use a realistic example. Define assumptions, terminology and the direction of any contrasts.
+
+## Check your understanding
+
+::: {.callout-tip collapse="true" title="Exercise"}
+Add a question or activity.
+
+**Suggested answer or facilitator note:** Add guidance here.
+:::
+
+## Recap
+
+- Summarise the central ideas.
+- Link to the next relevant module or activity.
+
+## References and attribution
+
+List sources and identify any material adapted from elsewhere.
+

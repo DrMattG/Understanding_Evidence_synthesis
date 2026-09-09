@@ -1,0 +1,302 @@
+---
+title: "Effect size"
+format: html
+editor: visual
+---
+
+## What is an effect size?
+
+```{r load libraries}
+#| echo: false
+#| message: false
+#| warning: false
+
+set.seed(1344) # set a seed to make simulation repeatable
+library(tidyverse)
+library(effsize)
+```
+
+A central component of Evidence Synthesis is the effect size. An effect size is, quite simply, the size of the effect. It is a way to quantify the difference between two groups. The effect size is a standardised measurement of the difference between two groups (e.g. the treatment group and the control group). A simple measure of effect is the standardised mean difference (often expressed as Cohen’s d or the small-sample bias corrected version Hedges’ g). Standardised mean difference simply quantifies how much of a difference there is between the control and treatment group. A very large effect of 2 (Cohen’s d), indicates that for two samples (control and treatment) with a standard deviation of 1 (where there is not much variation in the sample) that the mean of the control group is 2 standard deviations away from the treatment group mean.
+
+The effect size is often easier to understand using plots. Lets imagine that we want to know if a particular Protected Area is effective. We might set up a study where we do some counts of the number of birds species inside the Protected Area (the "treatment") and we compare this to counts of the number of bird species outside of the Protected Area (the "control"). We need to do more than one count inside and outside the Protected Area because there are many factors that could effect the birds we see on a single day (for example the weather or time of the day). We sample the control (not a protected area) and the treatment (a protected area) 5 times each to get an average number of bird species observed.
+
+We can simulate some data where the average (the mean) number of bird species in the control is half that of the treatment with a standard deviation of 1 (which is a very large effect).
+
+```{r}
+bird_richness<-data.frame(site_type=c(rep("control",5), rep("treatment", 5)),
+                          species_count=c(round(rnorm(n = 5, mean = 10, sd=1)),
+                                          round(rnorm(n = 5, mean = 20, sd=1))))
+bird_richness |> 
+  data.table::data.table()
+
+```
+
+We can calculate the Hedges' g using the effsize package in R.
+
+```{r}
+(hg<-effsize::cohen.d(bird_richness$species_count,bird_richness$site_type,hedges.correction=TRUE))
+```
+
+If we plot these data we can see that there is a clear difference on average between the treatment and control.
+
+```{r}
+bird_richness |> 
+  ggplot(aes(species_count, fill=site_type))+
+  geom_density()+
+  lims(x=c(5,25))+
+  ggthemes::theme_solarized()
+```
+
+The mean of the control group is `r round(hg$estimate,2)` standard deviations away from the treatment mean.
+
+We can add some more uncertainty in our data and show how this changes the effect size.
+
+```{r}
+bird_richness<-data.frame(site_type=c(rep("control",5), rep("treatment", 5)),
+                          species_count=c(round(rnorm(n = 5, mean = 10, sd=5)),
+                                          round(rnorm(n = 5, mean = 20, sd=10))))
+bird_richness |> 
+  data.table::data.table()
+
+```
+
+The variation in the data reduces the effect size but there is a difference between the two groups.
+
+```{r}
+(hg2<-effsize::cohen.d(bird_richness$species_count,bird_richness$site_type,hedges.correction=TRUE))
+```
+
+Again we plot these data, there is considerable overlap between the two groups but there is still a clear difference between them. The mean of the control group is `r round(hg2$estimate,2)` standard deviations away from the treatment mean.
+
+```{r}
+bird_richness |> 
+  ggplot(aes(species_count, fill=site_type))+
+  geom_density(alpha = 0.7)+
+  lims(x=c(0,60))+
+  ggthemes::theme_solarized()
+```
+
+Next we can simulate a situation where there is no difference between the treatment and control.
+
+```{r}
+bird_richness<-data.frame(site_type=c(rep("control",5), rep("treatment", 5)),
+                          species_count=c(round(rnorm(n = 5, mean = 10, sd=5)),
+                                          round(rnorm(n = 5, mean = 10, sd=5))))
+bird_richness |> 
+  data.table::data.table()
+
+```
+
+The Hedges' g here is small.
+
+```{r}
+(hg3<-effsize::cohen.d(bird_richness$species_count,bird_richness$site_type,hedges.correction=TRUE))
+```
+
+When we plot these data we can see the two groups are completely overlapping.
+
+```{r}
+bird_richness |> 
+  ggplot(aes(species_count, fill=site_type))+
+  geom_density(alpha = 0.7)+
+  lims(x=c(0,25))+
+  ggthemes::theme_solarized()
+
+```
+
+## Effect size and significance
+
+What is a "significant" effect size? The effect size is often said to be a true measure of the significance of the difference between two groups. This is because it quantifies the actual difference. Where an observed effect generalises (i.e. an effect found in one location/experiment is found in other locations) it allows us to know how much difference our intervention would make - in our example above, how much difference a protected area would make to bird species richness on average.
+
+### But what about "statistical significance"?
+
+Statistical significance is the likelihood that the difference between two groups is just chance rather than a "true" difference between the groups. A p-value is often presented in academic literature, where a p-value \<0.05 is considered significant and a p-value \>0.05 as non-significant. The problem with this approach is that the "statistical significance" might not represent a practical significance. This is because a p-value is related to the size of the effect and the size of a sample. If we have a large effect, with a small sample size we would expect "statistical significance". Likewise with a small effect and a massive sample size we would also expect "statistical significance". "Statistical significance" tells us nothing about the size of the effect (which is the most important thing!) and without the effect size you do not know whether or not it is worth investing in an intervention.
+
+Statistical significance is important (in the predominant statistical paradigm in science at least) as it can help us to avoid making conclusions based on too small a sample size. We can use the "confidence interval" which tells us about how much margin for error there is in the effect size. An effect size estimated from a large sample has less margin for error (we are more confident in it) and an effect size estimated from a small sample has more margin for error (we are less confident in it). If the 95% confidence interval includes zero then that is the same as saying that there is no "statistical significance" (p \> 0.05). If the 95% confidence interval does not include zero then we can be confident that our effect is "statistically significant".
+
+Taking our three estimates of effect above we can plot them to show the confidence intervals.
+
+```{r}
+
+CI_plot_data<-data.frame(effect=c(1,2,3),
+                         estimate=c(hg$estimate, hg2$estimate, hg3$estimate),
+                         upper=c(hg$conf.int[1],hg2$conf.int[1],hg3$conf.int[1]),
+                         lower=c(hg$conf.int[2],hg2$conf.int[2],hg3$conf.int[2]))
+
+CI_plot_data |> 
+  ggplot(aes())+
+  geom_pointrange(aes(y=effect, x=estimate, xmin=lower, xmax=upper, colour=as.factor(effect)))+
+  labs(x="effect size", y="")+
+  geom_vline(xintercept=0, colour="red", lty=2)+
+  ggthemes::theme_solarized()+
+  theme(axis.text.y=element_blank(), 
+      axis.ticks.y=element_blank(),
+      legend.position = "none")
+
+
+```
+
+We can see that only one of the effect size confidence limits does not encompass the line of zero effect and is therefore "statistically significant".
+
+## Other measures of effect
+
+There are lots of other effect size measures. In ecology we tend to just use the standardised mean difference corrected for small sample sizes (Hegdes' g) or the log response ratio. The log response ratio is used where studies are comparing ratios (e.g. survival, growth rates) and where the data are bounded by 0 (the value can not be less than 0). The log response ratio is also a standardised effect size which allows it to be compared across studies.
+
+For example, lets imagine we are measuring the effect of an intervention on the growth rate of a plant. The treatment group has a higher rate of growth than the control.
+
+```{r}
+
+# Generate data
+control_growth <- rnorm(n = 30, mean = 50, sd = 10)
+treatment_growth <- rnorm(n = 30, mean = 65, sd = 10)
+
+# Calculate means and standard deviations
+mean_control <- mean(control_growth)
+mean_treatment <- mean(treatment_growth)
+sd_control <- sd(control_growth)
+sd_treatment <- sd(treatment_growth)
+
+# Sample sizes
+n_control <- length(control_growth)
+n_treatment <- length(treatment_growth)
+
+# Log response ratio
+LRR <- log(mean_treatment / mean_control)
+
+# Calculate variance and standard error of LRR
+var_LRR <- (sd_treatment^2 / (n_treatment * mean_treatment^2)) + (sd_control^2 / (n_control * mean_control^2))
+SE_LRR <- sqrt(var_LRR)
+
+# 95% Confidence Interval
+CI_lower <- LRR - 1.96 * SE_LRR
+CI_upper <- LRR + 1.96 * SE_LRR
+
+# Output the results
+cat("Log Response Ratio (LRR):", LRR, "\n")
+#Log Response Ratio (LRR): 0.2040963 
+cat("95% Confidence Interval:", CI_lower, "to", CI_upper, "\n")
+#95% Confidence Interval: 0.1230115 to 0.2851812 
+
+```
+
+If the control group have a higher rate of growth then the effect size will be negative.
+
+```{r}
+
+# Generate data
+control_growth <- rnorm(n = 30, mean = 65, sd = 10)
+treatment_growth <- rnorm(n = 30, mean = 50, sd = 10)
+
+# Calculate means and standard deviations
+mean_control <- mean(control_growth)
+mean_treatment <- mean(treatment_growth)
+sd_control <- sd(control_growth)
+sd_treatment <- sd(treatment_growth)
+
+# Sample sizes
+n_control <- length(control_growth)
+n_treatment <- length(treatment_growth)
+
+# Log response ratio
+LRR <- log(mean_treatment / mean_control)
+
+# Calculate variance and standard error of LRR
+var_LRR <- (sd_treatment^2 / (n_treatment * mean_treatment^2)) + (sd_control^2 / (n_control * mean_control^2))
+SE_LRR <- sqrt(var_LRR)
+
+# 95% Confidence Interval
+CI_lower <- LRR - 1.96 * SE_LRR
+CI_upper <- LRR + 1.96 * SE_LRR
+
+# Output the results
+cat("Log Response Ratio (LRR):", LRR, "\n")
+# Log Response Ratio (LRR): -0.3315001 
+cat("95% Confidence Interval:", CI_lower, "to", CI_upper, "\n")
+#95% Confidence Interval: -0.4317385 to -0.2312618 
+```
+
+If there is no difference between the group the effect size will be close to zero.
+
+```{r}
+
+# Generate data
+control_growth <- rnorm(n = 30, mean = 50, sd = 1)
+treatment_growth <- rnorm(n = 30, mean = 50, sd = 1)
+
+# Calculate means and standard deviations
+mean_control <- mean(control_growth)
+mean_treatment <- mean(treatment_growth)
+sd_control <- sd(control_growth)
+sd_treatment <- sd(treatment_growth)
+
+# Sample sizes
+n_control <- length(control_growth)
+n_treatment <- length(treatment_growth)
+
+# Log response ratio
+LRR <- log(mean_treatment / mean_control)
+
+# Calculate variance and standard error of LRR
+var_LRR <- (sd_treatment^2 / (n_treatment * mean_treatment^2)) + (sd_control^2 / (n_control * mean_control^2))
+SE_LRR <- sqrt(var_LRR)
+
+# 95% Confidence Interval
+CI_lower <- LRR - 1.96 * SE_LRR
+CI_upper <- LRR + 1.96 * SE_LRR
+
+# Output the results
+cat("Log Response Ratio (LRR):", LRR, "\n")
+#Log Response Ratio (LRR): 0.004507854 
+cat("95% Confidence Interval:", CI_lower, "to", CI_upper, "\n")
+#95% Confidence Interval: -0.004857286 to 0.01387299 
+
+```
+
+## Some common pitfalls with effect sizes
+
+Both standardised mean difference and response ratios require the standard deviations of the two groups (control and treatment) to estimate the effect size's precision (the uncertainty) which gives us the 95% confidence limits. In many published studies the standard deviation is not reported making it difficult to calculate an effect size without making some big assumptions about the underlying data.
+
+Often the standard error is mistakenly reported as the standard deviation, this has a big effect on the calculation of the standardised mean difference.
+
+```{r}
+# Generate data
+control_group <- rnorm(n = 30, mean = 50, sd = 10)
+treatment_group <- rnorm(n = 30, mean = 65, sd = 10)
+
+# Calculate standard deviations
+sd_control <- sd(control_group)
+sd_treatment <- sd(treatment_group)
+
+# Calculate standard errors
+se_control <- sd_control / sqrt(length(control_group))
+se_treatment <- sd_treatment / sqrt(length(treatment_group))
+
+# Calculate pooled standard deviations (correct approach)
+spooled_correct <- sqrt(((length(control_group) - 1) * sd_control^2 + (length(treatment_group) - 1) * sd_treatment^2) /
+                       (length(control_group) + length(treatment_group) - 2))
+
+# Calculate pooled "standard deviations" incorrectly using standard errors
+spooled_incorrect <- sqrt(((length(control_group) - 1) * se_control^2 + (length(treatment_group) - 1) * se_treatment^2) /
+                          (length(control_group) + length(treatment_group) - 2))
+
+# Calculate Hedges' g using correct pooled SD
+hedges_g_correct <- (mean(treatment_group) - mean(control_group)) / spooled_correct
+
+# Calculate Hedges' g using incorrect pooled SE
+hedges_g_incorrect <- (mean(treatment_group) - mean(control_group)) / spooled_incorrect
+
+# Output results
+cat("Hedges' g using correct SD:", hedges_g_correct, "\n")
+#Hedges' g using correct SD: 1.952175
+cat("Hedges' g using incorrect SE:", hedges_g_incorrect, "\n")
+#Hedges' g using incorrect SE: 10.6925 
+
+```
+
+The Hedges' g is large when using the standard error instead of standard deviation.
+
+The log response ratio can be biased when sample sizes from the treatment and control groups are small, when the two means are not close to each other and when at least one of the two means are close to zero. This is a common issue in ecological meta-analyses where zeros are quite a common outcome of a study.
+
+## Recap
+
+Effect sizes are a measure of the difference between two groups (typically a control group and a treatment group). The effect size is a more useful measure of the effect of an intervention than a p-value and the confidence intervals tells us how much we can trust the estimate.

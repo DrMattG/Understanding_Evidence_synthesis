@@ -1,0 +1,184 @@
+---
+title: "Understanding effect sizes"
+description: "A practical introduction to effect magnitude, precision and interpretation"
+---
+
+| | |
+|---|---|
+| **Audience** | Learners encountering quantitative synthesis for the first time |
+| **Duration** | 45–60 minutes |
+| **Prerequisites** | Means, standard deviations and sampling variation |
+| **Software** | None required; optional examples use base R |
+
+## Learning outcomes
+
+After this module, learners should be able to:
+
+1. Explain what an effect size represents.
+2. Distinguish effect magnitude from its precision.
+3. Interpret the direction and scale of a mean difference, standardised mean difference and response ratio.
+4. Explain why statistical significance is not the same as practical importance.
+5. Identify common problems when calculating or interpreting effect sizes.
+
+## What is an effect size?
+
+An **effect size** is a quantitative description of a relationship or contrast. It might describe the difference between treatment and comparison groups, the association between two variables, or the change in an outcome over time.
+
+Effect sizes are not necessarily standardised. A difference of five species, a risk ratio of 0.75 and a standardised mean difference of 0.4 are all effect sizes, but they answer somewhat different questions.
+
+Consider a study comparing bird-species richness inside and outside protected areas. If the mean richness is 15 species inside and 10 outside, the raw mean difference is:
+
+$$
+MD = \bar{X}_{treatment} - \bar{X}_{control} = 15 - 10 = 5\text{ species}.
+$$
+
+This is easy to interpret, provided that all studies use a comparable outcome scale.
+
+## Standardised mean differences
+
+When studies measure the same underlying construct on different scales, the mean difference can be expressed relative to the within-group variation. Hedges' $g$ is a small-sample corrected standardised mean difference:
+
+$$
+g = J \frac{\bar{X}_{treatment}-\bar{X}_{control}}{S_{pooled}},
+$$
+
+where $S_{pooled}$ is the pooled standard deviation and $J$ is the small-sample correction.
+
+Suppose protected and unprotected sites differ by two species and the pooled standard deviation is also approximately two species. The standardised difference is approximately one pooled standard deviation. The sign depends on which group is subtracted from which, so the direction must always be defined.
+
+```{r}
+#| label: fig-overlap
+#| fig-cap: "The same difference in means can appear more or less distinct depending on within-group variation."
+#| fig-width: 8
+#| fig-height: 4
+
+x <- seq(0, 20, length.out = 500)
+old_par <- par(mfrow = c(1, 2), mar = c(4, 4, 2, 1))
+
+plot(x, dnorm(x, 9, 1), type = "l", lwd = 3, col = "#3366AA",
+     xlab = "Outcome", ylab = "Density", main = "Lower variation")
+lines(x, dnorm(x, 11, 1), lwd = 3, col = "#CC6677")
+legend("topright", c("Comparison", "Treatment"), lwd = 3,
+       col = c("#3366AA", "#CC6677"), bty = "n")
+
+plot(x, dnorm(x, 9, 4), type = "l", lwd = 3, col = "#3366AA",
+     xlab = "Outcome", ylab = "Density", main = "Higher variation")
+lines(x, dnorm(x, 11, 4), lwd = 3, col = "#CC6677")
+
+par(old_par)
+```
+
+The difference between the means is two units in both panels. Relative to the variation, however, the separation is much greater in the first panel. Standardisation changes the estimand: it is not merely a unit conversion, because variation contributes to the value of the effect size.
+
+::: {.callout-warning title="Avoid universal labels"}
+Rules describing values such as 0.2, 0.5 and 0.8 as universally “small”, “medium” and “large” ignore the outcome, context and consequences. Whenever possible, interpret an effect against a substantively meaningful threshold.
+:::
+
+## Magnitude and precision are different
+
+An estimated effect is calculated from a sample and therefore has sampling uncertainty. A confidence interval describes the range of parameter values most compatible with the data and model at the stated confidence level. It is not the range containing 95% of individual observations.
+
+```{r}
+#| label: fig-precision
+#| fig-cap: "Effect estimates can have the same magnitude but different precision."
+#| fig-width: 7
+#| fig-height: 4
+
+estimate <- c(0.5, 0.5, 0.05)
+lower <- c(0.35, -0.15, -0.10)
+upper <- c(0.65, 1.15, 0.20)
+labels <- c("Larger sample", "Smaller sample", "Near-zero estimate")
+
+plot(estimate, 3:1, xlim = c(-0.3, 1.3), ylim = c(0.5, 3.5),
+     pch = 19, cex = 1.3, yaxt = "n", ylab = "", xlab = "Effect size")
+segments(lower, 3:1, upper, 3:1, lwd = 2)
+abline(v = 0, lty = 2, col = "grey40")
+axis(2, at = 3:1, labels = labels, las = 1)
+```
+
+The first two estimates have the same magnitude, but the second is less precise. The third is estimated close to zero. These are different evidential situations and should not be collapsed into “significant” versus “non-significant.”
+
+### What a p-value does—and does not—say
+
+A p-value is the probability, under a specified statistical model and null hypothesis, of obtaining a result at least as incompatible with that hypothesis as the observed result. It is **not** the probability that the null hypothesis is true, nor the probability that the result occurred “by chance.”
+
+A small but precisely estimated effect may have a small p-value without being important. A potentially important but imprecisely estimated effect may have a large p-value. Interpretation should consider magnitude, precision, study validity, outcome importance and the decision context.
+
+## Log response ratios
+
+For positive ratio-scale outcomes, the response ratio compares group means:
+
+$$
+RR = \frac{\bar{X}_{treatment}}{\bar{X}_{control}}, \qquad
+\ln(RR) = \ln(\bar{X}_{treatment})-\ln(\bar{X}_{control}).
+$$
+
+If treatment mean growth is 65 and comparison mean growth is 50:
+
+```{r}
+mean_treatment <- 65
+mean_control <- 50
+
+log_response_ratio <- log(mean_treatment / mean_control)
+response_ratio <- exp(log_response_ratio)
+
+round(c(log_response_ratio = log_response_ratio,
+        response_ratio = response_ratio), 3)
+```
+
+The response ratio is 1.3: the treatment mean is 30% larger than the comparison mean. On the log scale, zero represents no difference; after exponentiation, one represents no difference.
+
+The log response ratio is generally unsuitable when means can be zero or negative. Small samples, large coefficients of variation and means close to zero can also introduce bias or instability. Binary outcomes such as survival are commonly analysed using effect measures specifically defined for event data, including risk ratios, odds ratios or risk differences.
+
+## Common pitfalls
+
+### Confusing standard errors and standard deviations
+
+The standard deviation describes variation among observations. The standard error describes uncertainty in an estimated mean and ordinarily decreases as sample size increases:
+
+$$
+SE = \frac{SD}{\sqrt{n}}.
+$$
+
+Substituting an SE for an SD when calculating a standardised mean difference makes the denominator too small and can greatly inflate the estimated effect.
+
+### Ignoring dependence
+
+Several effects from the same study, site, participant group or control group are not automatically independent. Treating them as independent makes the dataset appear more informative than it is and generally produces confidence intervals that are too narrow.
+
+### Treating the effect measure as a technical afterthought
+
+Different measures encode different questions. Choosing among a raw mean difference, standardised mean difference, response ratio or risk difference changes the estimand and the interpretation. The choice should follow from the review question, outcome scale and intended decision—not simply from software defaults.
+
+### Equating an effect with a causal effect
+
+An effect-size calculation does not repair confounding, selection bias, measurement error or other design limitations. Whether an estimate supports a causal interpretation depends on how the data were generated and analysed.
+
+## Check your understanding
+
+::: {.callout-tip collapse="true" title="1. Magnitude versus precision"}
+Two studies estimate the same mean difference. Study A has a narrow confidence interval and Study B has a wide confidence interval. What differs?
+
+**Suggested answer:** Their estimated magnitudes are the same, but Study A is more precise under the assumptions of its analysis. This alone does not establish that Study A is less biased.
+:::
+
+::: {.callout-tip collapse="true" title="2. Statistical versus practical importance"}
+A very large study estimates an intervention effect of 0.02 standard deviations with a 95% confidence interval from 0.01 to 0.03. How would you interpret it?
+
+**Suggested answer:** The estimate is precise and incompatible with a zero effect under the model, but it is very small on the standardised scale. Its practical importance depends on the outcome, costs, consequences and relevant decision threshold.
+:::
+
+::: {.callout-tip collapse="true" title="3. Choosing an effect measure"}
+All studies report plant height in centimetres. Why might a raw mean difference be preferable to a standardised mean difference?
+
+**Suggested answer:** The raw difference retains a directly interpretable unit and does not make the effect depend on within-study variation. Standardisation may be unnecessary when the outcome scale is common and meaningful.
+:::
+
+## Recap
+
+- An effect size describes the magnitude of a contrast or relationship.
+- Magnitude and precision answer different questions.
+- Effect measures are not interchangeable; their selection helps define the estimand.
+- Statistical compatibility does not determine practical importance.
+- Calculation cannot overcome weaknesses in study design or execution.
+

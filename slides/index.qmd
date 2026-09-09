@@ -1,0 +1,15 @@
+---
+title: "Slide decks"
+---
+
+This section will collect editable RevealJS slide decks that can be taught directly or adapted for different audiences.
+
+Each deck should include:
+
+- source `.qmd` files rather than only a rendered presentation;
+- learning outcomes and an approximate duration;
+- speaker or facilitator notes where appropriate;
+- attribution and licences for externally sourced material;
+- links to associated exercises, datasets and modules.
+
+Use the [slide-deck template on GitHub](https://github.com/DrMattG/Understanding_Evidence_synthesis/blob/main/templates/slides-template.qmd) as a starting point.

@@ -1,0 +1,29 @@
+---
+title: "About"
+---
+
+## Why this exists
+
+Evidence synthesis requires more than learning a sequence of review steps. Learners must understand how questions, study designs, bias, effect measures and analytical choices shape the claims that a synthesis can support.
+
+The repository aims to make that reasoning teachable. Resources should help learners interrogate evidence rather than simply reproduce a workflow.
+
+## Principles
+
+Resources in the repository should be:
+
+- **Open:** available for reuse and adaptation with attribution.
+- **Modular:** useful as a standalone activity or as part of a longer course.
+- **Transparent:** accompanied by editable source files, data and code where possible.
+- **Practical:** based on realistic decisions and examples.
+- **Critical:** clear about assumptions, uncertainty and limitations.
+- **Cross-disciplinary:** accessible beyond the field in which an example originated.
+
+## Who it is for
+
+The collection is intended for university instructors, workshop facilitators, evidence-synthesis teams, decision makers and independent learners. Individual modules state their intended audience, prerequisites and approximate duration.
+
+## Scope
+
+The collection may eventually cover question formulation, searching, screening, critical appraisal, data extraction, effect sizes, quantitative synthesis, qualitative synthesis, certainty of evidence, reporting and responsible uses of automation.
+
