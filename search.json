@@ -1,0 +1,329 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Understanding Evidence Synthesis",
+    "section": "",
+    "text": "Explore the collection\nEvidence synthesis is now taught across ecology, conservation, health, education and the social sciences, but good teaching materials are often scattered across personal websites and one-off workshops.\nThis an open collection of reusable lessons, slides, exercises, datasets and instructor notes. It is intended for teachers who want adaptable material and learners who want clear explanations grounded in practical examples.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Understanding Evidence Synthesis</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#explore-the-collection",
+    "href": "index.html#explore-the-collection",
+    "title": "Understanding Evidence Synthesis",
+    "section": "",
+    "text": "Teaching modules\nShort, self-contained lessons that can be used independently or assembled into a course.\nBrowse modules\n\n\nExercises and data\nActivities, worked examples and reusable datasets for hands-on teaching.\nBrowse exercises\n\n\nContribute\nShare a resource, improve an explanation or adapt a module for another discipline.\nHow to contribute",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Understanding Evidence Synthesis</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#first-module",
+    "href": "index.html#first-module",
+    "title": "Understanding Evidence Synthesis",
+    "section": "First module",
+    "text": "First module\nStart with Understanding effect sizes, an introduction to effect magnitude, uncertainty and practical interpretation.\n\n\n\n\n\n\nNoteA growing resource\n\n\n\nThis is an early version. The structure and contribution process will develop as materials and contributors are added.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Understanding Evidence Synthesis</span>"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Why this exists\nEvidence synthesis requires more than learning a sequence of review steps. Learners must understand how questions, study designs, bias, effect measures and analytical choices shape the claims that a synthesis can support.\nThe repository aims to make that reasoning teachable. Resources should help learners interrogate evidence rather than simply reproduce a workflow.",
+    "crumbs": [
+      "Start here",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>About</span>"
+    ]
+  },
+  {
+    "objectID": "about.html#principles",
+    "href": "about.html#principles",
+    "title": "About",
+    "section": "Principles",
+    "text": "Principles\nResources in the repository should be:\n\nOpen: available for reuse and adaptation with attribution.\nModular: useful as a standalone activity or as part of a longer course.\nTransparent: accompanied by editable source files, data and code where possible.\nPractical: based on realistic decisions and examples.\nCritical: clear about assumptions, uncertainty and limitations.\nCross-disciplinary: accessible beyond the field in which an example originated.",
+    "crumbs": [
+      "Start here",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>About</span>"
+    ]
+  },
+  {
+    "objectID": "about.html#who-it-is-for",
+    "href": "about.html#who-it-is-for",
+    "title": "About",
+    "section": "Who it is for",
+    "text": "Who it is for\nThe collection is intended for university instructors, workshop facilitators, evidence-synthesis teams, decision makers and independent learners. Individual modules state their intended audience, prerequisites and approximate duration.",
+    "crumbs": [
+      "Start here",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>About</span>"
+    ]
+  },
+  {
+    "objectID": "about.html#scope",
+    "href": "about.html#scope",
+    "title": "About",
+    "section": "Scope",
+    "text": "Scope\nThe collection may eventually cover question formulation, searching, screening, critical appraisal, data extraction, effect sizes, quantitative synthesis, qualitative synthesis, certainty of evidence, reporting and responsible uses of automation.",
+    "crumbs": [
+      "Start here",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>About</span>"
+    ]
+  },
+  {
+    "objectID": "learning-paths.html",
+    "href": "learning-paths.html",
+    "title": "Learning paths",
+    "section": "",
+    "text": "Understanding published syntheses\nThe materials are modular: there is no requirement to work through them in a fixed order. These suggested paths show how resources could be combined.\nFor decision makers, practitioners and students who need to interpret reviews:",
+    "crumbs": [
+      "Start here",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Learning paths</span>"
+    ]
+  },
+  {
+    "objectID": "learning-paths.html#understanding-published-syntheses",
+    "href": "learning-paths.html#understanding-published-syntheses",
+    "title": "Learning paths",
+    "section": "",
+    "text": "Framing an answerable question (planned)\nRecognising study designs and threats to validity (planned)\nUnderstanding effect sizes\nReading a forest plot (planned)\nJudging heterogeneity and applicability (planned)",
+    "crumbs": [
+      "Start here",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Learning paths</span>"
+    ]
+  },
+  {
+    "objectID": "learning-paths.html#conducting-an-evidence-synthesis",
+    "href": "learning-paths.html#conducting-an-evidence-synthesis",
+    "title": "Learning paths",
+    "section": "Conducting an evidence synthesis",
+    "text": "Conducting an evidence synthesis\nFor learners planning or undertaking a review:\n\nQuestions and eligibility criteria (planned)\nSearching and screening (planned)\nCritical appraisal (planned)\nData extraction and effect-size calculation (planned)\nQuantitative or narrative synthesis (planned)\nReporting and reproducibility (planned)",
+    "crumbs": [
+      "Start here",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Learning paths</span>"
+    ]
+  },
+  {
+    "objectID": "learning-paths.html#short-methods-workshop",
+    "href": "learning-paths.html#short-methods-workshop",
+    "title": "Learning paths",
+    "section": "Short methods workshop",
+    "text": "Short methods workshop\nFor a half-day introductory session:\n\nWhat makes evidence trustworthy? (planned)\nUnderstanding effect sizes\nInterpreting a forest plot (planned)\nA critical-appraisal exercise (planned)",
+    "crumbs": [
+      "Start here",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Learning paths</span>"
+    ]
+  },
+  {
+    "objectID": "modules/index.html",
+    "href": "modules/index.html",
+    "title": "Teaching modules",
+    "section": "",
+    "text": "Planned modules\nModules are designed to be adapted. Each one should identify its audience, learning outcomes, approximate duration, prerequisites and associated teaching resources.",
+    "crumbs": [
+      "Teaching modules",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teaching modules</span>"
+    ]
+  },
+  {
+    "objectID": "modules/index.html#planned-modules",
+    "href": "modules/index.html#planned-modules",
+    "title": "Teaching modules",
+    "section": "",
+    "text": "Questions, estimands and eligibility criteria\nSearching and screening\nCritical appraisal and causal claims\nReading forest and orchard plots\nHeterogeneity and generalisation\nMeta-regression and multilevel models\nAlternatives to vote counting\nReporting and reproducible workflows\nResponsible automation in evidence synthesis",
+    "crumbs": [
+      "Teaching modules",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teaching modules</span>"
+    ]
+  },
+  {
+    "objectID": "modules/effect-sizes.html",
+    "href": "modules/effect-sizes.html",
+    "title": "Understanding effect sizes",
+    "section": "",
+    "text": "Learning outcomes\nAfter this module, learners should be able to:",
+    "crumbs": [
+      "Teaching modules",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Understanding effect sizes</span>"
+    ]
+  },
+  {
+    "objectID": "modules/effect-sizes.html#learning-outcomes",
+    "href": "modules/effect-sizes.html#learning-outcomes",
+    "title": "Understanding effect sizes",
+    "section": "",
+    "text": "Explain what an effect size represents.\nDistinguish effect magnitude from its precision.\nInterpret the direction and scale of a mean difference, standardised mean difference and response ratio.\nExplain why statistical significance is not the same as practical importance.\nIdentify common problems when calculating or interpreting effect sizes.",
+    "crumbs": [
+      "Teaching modules",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Understanding effect sizes</span>"
+    ]
+  },
+  {
+    "objectID": "modules/effect-sizes.html#what-is-an-effect-size",
+    "href": "modules/effect-sizes.html#what-is-an-effect-size",
+    "title": "Understanding effect sizes",
+    "section": "What is an effect size?",
+    "text": "What is an effect size?\nAn effect size is a quantitative description of a relationship or contrast. It might describe the difference between treatment and comparison groups, the association between two variables, or the change in an outcome over time.\nEffect sizes are not necessarily standardised. A difference of five species, a risk ratio of 0.75 and a standardised mean difference of 0.4 are all effect sizes, but they answer somewhat different questions.\nConsider a study comparing bird-species richness inside and outside protected areas. If the mean richness is 15 species inside and 10 outside, the raw mean difference is:\n\\[\nMD = \\bar{X}_{treatment} - \\bar{X}_{control} = 15 - 10 = 5\\text{ species}.\n\\]\nThis is easy to interpret, provided that all studies use a comparable outcome scale.",
+    "crumbs": [
+      "Teaching modules",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Understanding effect sizes</span>"
+    ]
+  },
+  {
+    "objectID": "modules/effect-sizes.html#standardised-mean-differences",
+    "href": "modules/effect-sizes.html#standardised-mean-differences",
+    "title": "Understanding effect sizes",
+    "section": "Standardised mean differences",
+    "text": "Standardised mean differences\nWhen studies measure the same underlying construct on different scales, the mean difference can be expressed relative to the within-group variation. Hedges’ \\(g\\) is a small-sample corrected standardised mean difference:\n\\[\ng = J \\frac{\\bar{X}_{treatment}-\\bar{X}_{control}}{S_{pooled}},\n\\]\nwhere \\(S_{pooled}\\) is the pooled standard deviation and \\(J\\) is the small-sample correction.\nSuppose protected and unprotected sites differ by two species and the pooled standard deviation is also approximately two species. The standardised difference is approximately one pooled standard deviation. The sign depends on which group is subtracted from which, so the direction must always be defined.\n\n\nCode\nx &lt;- seq(0, 20, length.out = 500)\nold_par &lt;- par(mfrow = c(1, 2), mar = c(4, 4, 2, 1))\n\nplot(x, dnorm(x, 9, 1), type = \"l\", lwd = 3, col = \"#3366AA\",\n     xlab = \"Outcome\", ylab = \"Density\", main = \"Lower variation\")\nlines(x, dnorm(x, 11, 1), lwd = 3, col = \"#CC6677\")\nlegend(\"topright\", c(\"Comparison\", \"Treatment\"), lwd = 3,\n       col = c(\"#3366AA\", \"#CC6677\"), bty = \"n\")\n\nplot(x, dnorm(x, 9, 4), type = \"l\", lwd = 3, col = \"#3366AA\",\n     xlab = \"Outcome\", ylab = \"Density\", main = \"Higher variation\")\nlines(x, dnorm(x, 11, 4), lwd = 3, col = \"#CC6677\")\n\npar(old_par)\n\n\n\n\n\n\n\n\nFigure 5.1: The same difference in means can appear more or less distinct depending on within-group variation.\n\n\n\n\n\nThe difference between the means is two units in both panels. Relative to the variation, however, the separation is much greater in the first panel. Standardisation changes the estimand: it is not merely a unit conversion, because variation contributes to the value of the effect size.\n\n\n\n\n\n\nWarningAvoid universal labels\n\n\n\nRules describing values such as 0.2, 0.5 and 0.8 as universally “small”, “medium” and “large” ignore the outcome, context and consequences. Whenever possible, interpret an effect against a substantively meaningful threshold.",
+    "crumbs": [
+      "Teaching modules",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Understanding effect sizes</span>"
+    ]
+  },
+  {
+    "objectID": "modules/effect-sizes.html#magnitude-and-precision-are-different",
+    "href": "modules/effect-sizes.html#magnitude-and-precision-are-different",
+    "title": "Understanding effect sizes",
+    "section": "Magnitude and precision are different",
+    "text": "Magnitude and precision are different\nAn estimated effect is calculated from a sample and therefore has sampling uncertainty. A confidence interval describes the range of parameter values most compatible with the data and model at the stated confidence level. It is not the range containing 95% of individual observations.\n\n\nCode\nestimate &lt;- c(0.5, 0.5, 0.05)\nlower &lt;- c(0.35, -0.15, -0.10)\nupper &lt;- c(0.65, 1.15, 0.20)\nlabels &lt;- c(\"Larger sample\", \"Smaller sample\", \"Near-zero estimate\")\n\nplot(estimate, 3:1, xlim = c(-0.3, 1.3), ylim = c(0.5, 3.5),\n     pch = 19, cex = 1.3, yaxt = \"n\", ylab = \"\", xlab = \"Effect size\")\nsegments(lower, 3:1, upper, 3:1, lwd = 2)\nabline(v = 0, lty = 2, col = \"grey40\")\naxis(2, at = 3:1, labels = labels, las = 1)\n\n\n\n\n\n\n\n\nFigure 5.2: Effect estimates can have the same magnitude but different precision.\n\n\n\n\n\nThe first two estimates have the same magnitude, but the second is less precise. The third is estimated close to zero. These are different evidential situations and should not be collapsed into “significant” versus “non-significant.”\n\nWhat a p-value does—and does not—say\nA p-value is the probability, under a specified statistical model and null hypothesis, of obtaining a result at least as incompatible with that hypothesis as the observed result. It is not the probability that the null hypothesis is true, nor the probability that the result occurred “by chance.”\nA small but precisely estimated effect may have a small p-value without being important. A potentially important but imprecisely estimated effect may have a large p-value. Interpretation should consider magnitude, precision, study validity, outcome importance and the decision context.",
+    "crumbs": [
+      "Teaching modules",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Understanding effect sizes</span>"
+    ]
+  },
+  {
+    "objectID": "modules/effect-sizes.html#log-response-ratios",
+    "href": "modules/effect-sizes.html#log-response-ratios",
+    "title": "Understanding effect sizes",
+    "section": "Log response ratios",
+    "text": "Log response ratios\nFor positive ratio-scale outcomes, the response ratio compares group means:\n\\[\nRR = \\frac{\\bar{X}_{treatment}}{\\bar{X}_{control}}, \\qquad\n\\ln(RR) = \\ln(\\bar{X}_{treatment})-\\ln(\\bar{X}_{control}).\n\\]\nIf treatment mean growth is 65 and comparison mean growth is 50:\n\n\nCode\nmean_treatment &lt;- 65\nmean_control &lt;- 50\n\nlog_response_ratio &lt;- log(mean_treatment / mean_control)\nresponse_ratio &lt;- exp(log_response_ratio)\n\nround(c(log_response_ratio = log_response_ratio,\n        response_ratio = response_ratio), 3)\n\n\nlog_response_ratio     response_ratio \n             0.262              1.300 \n\n\nThe response ratio is 1.3: the treatment mean is 30% larger than the comparison mean. On the log scale, zero represents no difference; after exponentiation, one represents no difference.\nThe log response ratio is generally unsuitable when means can be zero or negative. Small samples, large coefficients of variation and means close to zero can also introduce bias or instability. Binary outcomes such as survival are commonly analysed using effect measures specifically defined for event data, including risk ratios, odds ratios or risk differences.",
+    "crumbs": [
+      "Teaching modules",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Understanding effect sizes</span>"
+    ]
+  },
+  {
+    "objectID": "modules/effect-sizes.html#common-pitfalls",
+    "href": "modules/effect-sizes.html#common-pitfalls",
+    "title": "Understanding effect sizes",
+    "section": "Common pitfalls",
+    "text": "Common pitfalls\n\nConfusing standard errors and standard deviations\nThe standard deviation describes variation among observations. The standard error describes uncertainty in an estimated mean and ordinarily decreases as sample size increases:\n\\[\nSE = \\frac{SD}{\\sqrt{n}}.\n\\]\nSubstituting an SE for an SD when calculating a standardised mean difference makes the denominator too small and can greatly inflate the estimated effect.\n\n\nIgnoring dependence\nSeveral effects from the same study, site, participant group or control group are not automatically independent. Treating them as independent makes the dataset appear more informative than it is and generally produces confidence intervals that are too narrow.\n\n\nTreating the effect measure as a technical afterthought\nDifferent measures encode different questions. Choosing among a raw mean difference, standardised mean difference, response ratio or risk difference changes the estimand and the interpretation. The choice should follow from the review question, outcome scale and intended decision—not simply from software defaults.\n\n\nEquating an effect with a causal effect\nAn effect-size calculation does not repair confounding, selection bias, measurement error or other design limitations. Whether an estimate supports a causal interpretation depends on how the data were generated and analysed.",
+    "crumbs": [
+      "Teaching modules",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Understanding effect sizes</span>"
+    ]
+  },
+  {
+    "objectID": "modules/effect-sizes.html#check-your-understanding",
+    "href": "modules/effect-sizes.html#check-your-understanding",
+    "title": "Understanding effect sizes",
+    "section": "Check your understanding",
+    "text": "Check your understanding\n\n\n\n\n\n\nTipMagnitude versus precision\n\n\n\n\n\nTwo studies estimate the same mean difference. Study A has a narrow confidence interval and Study B has a wide confidence interval. What differs?\nSuggested answer: Their estimated magnitudes are the same, but Study A is more precise under the assumptions of its analysis. This alone does not establish that Study A is less biased.\n\n\n\n\n\n\n\n\n\nTipStatistical versus practical importance\n\n\n\n\n\nA very large study estimates an intervention effect of 0.02 standard deviations with a 95% confidence interval from 0.01 to 0.03. How would you interpret it?\nSuggested answer: The estimate is precise and incompatible with a zero effect under the model, but it is very small on the standardised scale. Its practical importance depends on the outcome, costs, consequences and relevant decision threshold.\n\n\n\n\n\n\n\n\n\nTipChoosing an effect measure\n\n\n\n\n\nAll studies report plant height in centimetres. Why might a raw mean difference be preferable to a standardised mean difference?\nSuggested answer: The raw difference retains a directly interpretable unit and does not make the effect depend on within-study variation. Standardisation may be unnecessary when the outcome scale is common and meaningful.",
+    "crumbs": [
+      "Teaching modules",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Understanding effect sizes</span>"
+    ]
+  },
+  {
+    "objectID": "modules/effect-sizes.html#recap",
+    "href": "modules/effect-sizes.html#recap",
+    "title": "Understanding effect sizes",
+    "section": "Recap",
+    "text": "Recap\n\nAn effect size describes the magnitude of a contrast or relationship.\nMagnitude and precision answer different questions.\nEffect measures are not interchangeable; their selection helps define the estimand.\nStatistical compatibility does not determine practical importance.\nCalculation cannot overcome weaknesses in study design or execution.",
+    "crumbs": [
+      "Teaching modules",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Understanding effect sizes</span>"
+    ]
+  },
+  {
+    "objectID": "slides/index.html",
+    "href": "slides/index.html",
+    "title": "Slide decks",
+    "section": "",
+    "text": "This section will collect editable RevealJS slide decks that can be taught directly or adapted for different audiences.\nEach deck should include:\n\nsource .qmd files rather than only a rendered presentation;\nlearning outcomes and an approximate duration;\nspeaker or facilitator notes where appropriate;\nattribution and licences for externally sourced material;\nlinks to associated exercises, datasets and modules.\n\nUse the slide-deck template on GitHub as a starting point.",
+    "crumbs": [
+      "Resources",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Slide decks</span>"
+    ]
+  },
+  {
+    "objectID": "exercises/index.html",
+    "href": "exercises/index.html",
+    "title": "Exercises",
+    "section": "",
+    "text": "Suggested structure\nExercises should be usable in a classroom, workshop or self-directed setting. They may be embedded within modules or provided as separate downloadable resources.\nThe effect-size module contains the first short exercises.",
+    "crumbs": [
+      "Resources",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Exercises</span>"
+    ]
+  },
+  {
+    "objectID": "exercises/index.html#suggested-structure",
+    "href": "exercises/index.html#suggested-structure",
+    "title": "Exercises",
+    "section": "",
+    "text": "State the learning objective.\nDescribe the setting and task.\nGive learners only the information needed to begin.\nProvide prompts that encourage reasoning rather than recall alone.\nPut suggested answers or facilitator notes in collapsible sections.\nState any assumptions and reasonable alternative answers.",
+    "crumbs": [
+      "Resources",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Exercises</span>"
+    ]
+  },
+  {
+    "objectID": "datasets/index.html",
+    "href": "datasets/index.html",
+    "title": "Datasets",
+    "section": "",
+    "text": "This section will contain small, documented datasets suitable for teaching evidence-synthesis methods.\nContributed datasets should include:\n\na clear licence and source;\na data dictionary;\nenough context to understand the teaching example;\na distinction between original, simulated and modified data;\nscripts documenting any cleaning or transformation;\nno sensitive or personally identifying information.\n\nSimulated data are welcome when they make an assumption or statistical behaviour easier to see.",
+    "crumbs": [
+      "Resources",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Datasets</span>"
+    ]
+  },
+  {
+    "objectID": "contribute.html",
+    "href": "contribute.html",
+    "title": "Contribute",
+    "section": "",
+    "text": "Before contributing\nContributions can be new materials, adaptations, corrections, translations or improvements to accessibility and documentation.\nPlease check that you have permission to share every component of the resource. Teaching text and media contributed to this repository will be made available under CC BY 4.0; contributed code will be available under the MIT licence.",
+    "crumbs": [
+      "Contribute",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Contribute</span>"
+    ]
+  },
+  {
+    "objectID": "contribute.html#contribution-routes",
+    "href": "contribute.html#contribution-routes",
+    "title": "Contribute",
+    "section": "Contribution routes",
+    "text": "Contribution routes\n\nSuggest an idea or report a problem\nOpen a GitHub issue to propose a module, flag an error or discuss a substantial change before investing time in it.\n\n\nSubmit a resource\n\nFork the repository and create a branch.\nCopy the appropriate file from templates/.\nAdd supporting files in a clearly named folder.\nPreview the resource with quarto preview.\nOpen a pull request explaining the audience, learning outcomes and how the material has been tested.\n\nFor small corrections, use the Edit this page link shown on each page.",
+    "crumbs": [
+      "Contribute",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Contribute</span>"
+    ]
+  },
+  {
+    "objectID": "contribute.html#minimum-information-for-a-module",
+    "href": "contribute.html#minimum-information-for-a-module",
+    "title": "Contribute",
+    "section": "Minimum information for a module",
+    "text": "Minimum information for a module\n\nTitle and short description\nAuthor or contributors\nIntended audience and prerequisites\nLearning outcomes\nApproximate duration\nEditable source materials\nDependencies and setup instructions\nReferences and third-party attributions\n\nUse the module template on GitHub to begin.",
+    "crumbs": [
+      "Contribute",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Contribute</span>"
+    ]
+  },
+  {
+    "objectID": "contribute.html#review",
+    "href": "contribute.html#review",
+    "title": "Contribute",
+    "section": "Review",
+    "text": "Review\nContributions should be checked for methodological accuracy, clarity, usability and licensing. Review is intended to improve resources collaboratively; acceptance should not imply that a module represents the only valid way to teach a topic.",
+    "crumbs": [
+      "Contribute",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Contribute</span>"
+    ]
+  }
+]
