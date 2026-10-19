@@ -13,3 +13,10 @@ Each deck should include:
 - links to associated exercises, datasets and modules.
 
 Use the [slide-deck template on GitHub](https://github.com/DrMattG/Understanding_Evidence_synthesis/blob/main/templates/slides-template.qmd) as a starting point.
+
+## Meta-analysis for evidence synthesis in the agri-food sector
+
+Slides and supporting materials developed through the EU-NESA
+Virtual Mobility grant.
+
+[View the training package](https://github.com/DrMattG/eu-nesa-meta-analysis)

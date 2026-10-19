@@ -5,7 +5,7 @@ title: "Teaching modules"
 Modules are designed to be adapted. Each one should identify its audience, learning outcomes, approximate duration, prerequisites and associated teaching resources.
 
 | Module | Level | Duration | Resources |
-|---|---:|---:|---|
+|-----------------|------------------:|------------------:|-----------------|
 | [Understanding effect sizes](effect-sizes.qmd) | Introductory | 45–60 minutes | Lesson and embedded exercises |
 
 ## Planned modules
@@ -20,3 +20,9 @@ Modules are designed to be adapted. Each one should identify its audience, learn
 - Reporting and reproducible workflows
 - Responsible automation in evidence synthesis
 
+## EU-NESA meta-analysis training
+
+A practical training package for meta-analysis in the agri-food sector,
+including slides, worked examples and exercises in R.
+
+[Access the training materials on GitHub](https://github.com/DrMattG/eu-nesa-meta-analysis)
